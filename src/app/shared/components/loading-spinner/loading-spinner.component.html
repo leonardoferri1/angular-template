@@ -1,0 +1,9 @@
+<div *ngIf="isLoading$" class="spinner-container">
+  <mat-progress-spinner
+    *ngIf="isLoading$ | async"
+    mode="indeterminate"
+    class="spinner-element"
+    [color]="'primary'"
+  >
+  </mat-progress-spinner>
+</div>
