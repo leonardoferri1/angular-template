@@ -16,6 +16,8 @@ export class LoadingSpinnerComponent {
   isLoading$: Observable<boolean>;
 
   constructor(private store: Store) {
+    debugger;
     this.isLoading$ = this.store.select(selectIsLoading);
+    console.log(this.isLoading$);
   }
 }
