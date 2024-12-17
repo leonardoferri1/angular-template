@@ -1,0 +1,23 @@
+<mat-form-field appearance="fill" class="teste">
+  <mat-label>Enter your password</mat-label>
+  <input matInput [type]="hide() ? 'password' : 'text'" />
+  <button
+    mat-icon-button
+    matSuffix
+    (click)="clickEvent($event)"
+    [attr.aria-label]="'Hide password'"
+    [attr.aria-pressed]="hide()"
+  ></button>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+  <mat-label>Enter your password</mat-label>
+  <input matInput [type]="hide() ? 'password' : 'text'" />
+  <button
+    mat-icon-button
+    matSuffix
+    (click)="clickEvent($event)"
+    [attr.aria-label]="'Hide password'"
+    [attr.aria-pressed]="hide()"
+  ></button>
+</mat-form-field>
