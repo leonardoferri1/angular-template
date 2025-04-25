@@ -18,6 +18,22 @@ button {
   font-size: 1rem;
 }
 
+input,
+textarea {
+  &:read-only,
+  &:disabled {
+    user-select: none;
+    pointer-events: none;
+    color: #777;
+    border: 1px solid #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.invalid-input {
+  border: 1px solid $input-error;
+}
+
 body {
   background-color: #f7fafc !important;
   color: var(--base-text);
