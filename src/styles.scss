@@ -1,5 +1,7 @@
 @import "styles/variables";
 @import "styles/components/buttons";
+@import "styles/components/input";
+@import "styles/components/text-area";
 @import "styles/components/general";
 
 * {
@@ -35,7 +37,7 @@ textarea {
 }
 
 body {
-  background-color: #f7fafc !important;
+  background-color: $background-main;
   color: var(--base-text);
   -webkit-font-smoothing: antialiased;
 }

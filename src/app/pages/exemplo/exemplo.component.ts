@@ -3,18 +3,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { TextInputComponent } from '../../shared/components/web-components/text-input/text-input.component';
 
 @Component({
   selector: 'app-exemplo',
   standalone: true,
-  imports: [MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule],
+  imports: [TextInputComponent],
   templateUrl: './exemplo.component.html',
   styleUrl: './exemplo.component.scss',
 })
-export class ExemploComponent {
-  hide = signal(true);
-  clickEvent(event: MouseEvent) {
-    this.hide.set(!this.hide());
-    event.stopPropagation();
-  }
-}
+export class ExemploComponent {}
