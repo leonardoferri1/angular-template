@@ -1,0 +1,110 @@
+<h2>MultiSelect</h2>
+<p>
+  The <code>&lt;multiselect&gt;</code> component allows users to select multiple
+  options from a list. It implements <code>ControlValueAccessor</code>, making
+  it compatible with both <code>ngModel</code> and <code>Reactive Forms</code>.
+</p>
+
+<div class="guide-container">
+  <div class="example-block">
+    <h3>Example</h3>
+
+    <multiselect
+      [options]="fruits"
+      [labelField]="'name'"
+      [valueField]="'id'"
+      [placeholder]="'Selecione frutas'"
+      [(ngModel)]="selectedFruits"
+      (valueChange)="onFruitsChange($event)"
+    >
+    </multiselect>
+
+    <div class="result">
+      <p><strong>Selecionados:</strong></p>
+      <pre>{{ selectedFruits | json }}</pre>
+    </div>
+  </div>
+</div>
+
+<ds-code-block>
+  &lt;multiselect [options]="cities" labelField="name" valueField="code"
+  placeholder="Select cities" [(ngModel)]="selectedCities"
+  (valueChange)="onCitiesChange($event)"&gt;&lt;/multiselect&gt;
+</ds-code-block>
+
+<h3>Properties</h3>
+<table class="api-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>options</code></td>
+    <td><code>any[]</code></td>
+    <td><code>[]</code></td>
+    <td>The list of options to display in the multiselect.</td>
+  </tr>
+  <tr>
+    <td><code>placeholder</code></td>
+    <td><code>string</code></td>
+    <td><code>'Select options'</code></td>
+    <td>Text shown when no options are selected.</td>
+  </tr>
+  <tr>
+    <td><code>labelField</code></td>
+    <td><code>string</code></td>
+    <td><code>''</code></td>
+    <td>The property name used for the option labels.</td>
+  </tr>
+  <tr>
+    <td><code>valueField</code></td>
+    <td><code>string</code></td>
+    <td><code>''</code></td>
+    <td>The property name used for the option values.</td>
+  </tr>
+  <tr>
+    <td><code>isReadonly</code></td>
+    <td><code>boolean</code></td>
+    <td><code>false</code></td>
+    <td>If true, the multiselect cannot be opened or modified.</td>
+  </tr>
+  <tr>
+    <td><code>multiselectDirection</code></td>
+    <td><code>'up' | 'down'</code></td>
+    <td><code>'down'</code></td>
+    <td>Controls whether the dropdown opens above or below the input.</td>
+  </tr>
+  <tr>
+    <td><code>invalidValidator</code></td>
+    <td><code>boolean</code></td>
+    <td><code>false</code></td>
+    <td>Marks the multiselect as invalid for validation purposes.</td>
+  </tr>
+  <tr>
+    <td><code>semResultado</code></td>
+    <td><code>string</code></td>
+    <td><code>'No results found.'</code></td>
+    <td>Message displayed when no options match the search query.</td>
+  </tr>
+  <tr>
+    <td><code>selectedValues</code></td>
+    <td><code>any[]</code></td>
+    <td><code>[]</code></td>
+    <td>Currently selected option objects.</td>
+  </tr>
+</table>
+<h3>Events</h3>
+<table class="api-table">
+  <tr>
+    <th>Event</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>valueChange</code></td>
+    <td><code>any[]</code></td>
+    <td>Emitted when the selected options change.</td>
+  </tr>
+</table>

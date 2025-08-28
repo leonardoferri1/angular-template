@@ -34,6 +34,39 @@
             <p>text-area</p>
           </a>
         </div>
+
+        <div>
+          <a
+            class="nav-button"
+            *ngIf="opened"
+            (click)="onPanelSwitchEvent(3)"
+            [ngClass]="{ active: selectedPanel === 3 }"
+          >
+            <p>currency-input</p>
+          </a>
+        </div>
+
+        <div>
+          <a
+            class="nav-button"
+            *ngIf="opened"
+            (click)="onPanelSwitchEvent(4)"
+            [ngClass]="{ active: selectedPanel === 4 }"
+          >
+            <p>dropdown</p>
+          </a>
+        </div>
+
+        <div>
+          <a
+            class="nav-button"
+            *ngIf="opened"
+            (click)="onPanelSwitchEvent(5)"
+            [ngClass]="{ active: selectedPanel === 5 }"
+          >
+            <p>multiselect</p>
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,107 @@
+<h2>Dropdown</h2>
+<p>
+  The <code>&lt;dropdown&gt;</code> component is a custom dropdown field with
+  search capability. It implements <code>ControlValueAccessor</code>, making it
+  compatible with both <code>ngModel</code> and <code>Reactive Forms</code>.
+</p>
+
+<h3>Example</h3>
+<div class="demo-box">
+  <dropdown
+    [options]="countries"
+    labelField="name"
+    valueField="id"
+    placeholder="Select a country"
+    [(ngModel)]="selectedCountry"
+    (valueChange)="onCountryChange($event)"
+  ></dropdown>
+</div>
+
+<ds-code-block>
+  &lt;dropdown [options]="countries" labelField="name" valueField="id"
+  placeholder="Select a country" [(ngModel)]="selectedCountry"
+  (valueChange)="onCountryChange($event)"&gt;&lt;/dropdown&gt;
+</ds-code-block>
+
+<h3>Properties</h3>
+<table class="api-table">
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>options</code></td>
+    <td><code>any[]</code></td>
+    <td><code>[]</code></td>
+    <td>The list of options to display in the dropdown.</td>
+  </tr>
+  <tr>
+    <td><code>placeholder</code></td>
+    <td><code>string</code></td>
+    <td><code>''</code></td>
+    <td>Placeholder text shown when no option is selected.</td>
+  </tr>
+  <tr>
+    <td><code>labelField</code></td>
+    <td><code>string</code></td>
+    <td><code>''</code></td>
+    <td>The property name in the option object used for display.</td>
+  </tr>
+  <tr>
+    <td><code>valueField</code></td>
+    <td><code>string</code></td>
+    <td><code>''</code></td>
+    <td>The property name in the option object used as the value.</td>
+  </tr>
+  <tr>
+    <td><code>isReadonly</code></td>
+    <td><code>boolean</code></td>
+    <td><code>false</code></td>
+    <td>If true, the dropdown cannot be opened or modified.</td>
+  </tr>
+  <tr>
+    <td><code>dropdownDirection</code></td>
+    <td><code>'up' | 'down'</code></td>
+    <td><code>'down'</code></td>
+    <td>Controls whether the dropdown opens above or below the input.</td>
+  </tr>
+  <tr>
+    <td><code>invalidValidator</code></td>
+    <td><code>boolean</code></td>
+    <td><code>false</code></td>
+    <td>Marks the dropdown as invalid for validation purposes.</td>
+  </tr>
+  <tr>
+    <td><code>noResult</code></td>
+    <td><code>string</code></td>
+    <td><code>'No results found.'</code></td>
+    <td>Message displayed when no options match the search query.</td>
+  </tr>
+  <tr>
+    <td><code>selectedValue</code></td>
+    <td><code>any</code></td>
+    <td><code>null</code></td>
+    <td>Currently selected option object.</td>
+  </tr>
+</table>
+
+<h3>Events</h3>
+<table class="api-table">
+  <tr>
+    <th>Event</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>valueChange</code></td>
+    <td><code>any</code></td>
+    <td>Emitted when the selected option changes.</td>
+  </tr>
+  <tr>
+    <td><code>onKeyUp</code></td>
+    <td><code>string</code></td>
+    <td>Emitted when the user types in the search box.</td>
+  </tr>
+</table>
