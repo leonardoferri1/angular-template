@@ -1,14 +1,14 @@
-<h2>Input de Texto</h2>
+<h2>Text Input</h2>
 <p>
-  O componente <code>&lt;text-input&gt;</code> é um input customizado que
-  implementa <code>ControlValueAccessor</code>, funcionando com
-  <code>ngModel</code> e <code>Reactive Forms</code>.
+  The <code>&lt;text-input&gt;</code> component is a custom input that
+  implements <code>ControlValueAccessor</code>, working with
+  <code>ngModel</code> and <code>Reactive Forms</code>.
 </p>
 
-<h3>Exemplo</h3>
+<h3>Example</h3>
 <div class="demo-box">
   <text-input
-    placeholder="Digite seu nome"
+    placeholder="Enter your name"
     [(ngModel)]="name"
     [maxLength]="20"
     [invalidValidator]="isInvalid"
@@ -17,90 +17,89 @@
   ></text-input>
 </div>
 
-<h3>Código</h3>
+<h3>Code</h3>
 <ds-code-block>
-  &lt;text-input placeholder="Digite seu nome" [(ngModel)]="name"
+  &lt;text-input placeholder="Enter your name" [(ngModel)]="name"
   [maxLength]="20" [invalidValidator]="isInvalid"
   (valueChange)="onValueChange($event)" (onBlurEmit)="onBlur()"&gt;
   &lt;/text-input&gt;
 </ds-code-block>
 
-<h3>Propriedades</h3>
+<h3>Properties</h3>
 <table class="api-table">
   <tr>
-    <th>Propriedade</th>
-    <th>Tipo</th>
-    <th>Padrão</th>
-    <th>Descrição</th>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Description</th>
   </tr>
   <tr>
     <td><code>placeholder</code></td>
     <td><code>string</code></td>
     <td><code>''</code></td>
-    <td>Texto de placeholder exibido no input.</td>
+    <td>The placeholder text displayed inside the input.</td>
   </tr>
   <tr>
     <td><code>maxLength</code></td>
     <td><code>number</code></td>
     <td>-</td>
-    <td>Limite máximo de caracteres permitidos.</td>
+    <td>Maximum number of characters allowed.</td>
   </tr>
   <tr>
     <td><code>isReadonly</code></td>
     <td><code>boolean</code></td>
     <td><code>false</code></td>
-    <td>Define se o campo é somente leitura.</td>
+    <td>Determines if the input is read-only.</td>
   </tr>
   <tr>
     <td><code>mask</code></td>
     <td><code>string</code></td>
     <td><code>''</code></td>
-    <td>Máscara do campo (usando <code>ngx-mask</code>).</td>
+    <td>Input mask (using <code>ngx-mask</code>).</td>
   </tr>
   <tr>
     <td><code>disabled</code></td>
     <td><code>boolean</code></td>
     <td><code>false</code></td>
-    <td>Desabilita o campo.</td>
+    <td>Disables the input field.</td>
   </tr>
   <tr>
     <td><code>type</code></td>
     <td><code>'text' | 'password' | 'number'</code></td>
     <td><code>'text'</code></td>
     <td>
-      Tipo de input. Se <code>password</code>, exibe botão para mostrar/ocultar
-      senha.
+      Input type. If <code>password</code>, shows a button to toggle visibility.
     </td>
   </tr>
   <tr>
     <td><code>invalidValidator</code></td>
     <td><code>boolean</code></td>
     <td><code>false</code></td>
-    <td>Define se o input deve ter estilo de inválido.</td>
+    <td>Determines if the input should show invalid styling.</td>
   </tr>
   <tr>
     <td><code>allowSpecial</code></td>
     <td><code>boolean</code></td>
     <td><code>false</code></td>
-    <td>Impede caracteres especiais caso seja <code>false</code>.</td>
+    <td>Prevents special characters if set to <code>false</code>.</td>
   </tr>
 </table>
 
-<h3>Eventos</h3>
+<h3>Events</h3>
 <table class="api-table">
   <tr>
-    <th>Evento</th>
-    <th>Tipo</th>
-    <th>Descrição</th>
+    <th>Event</th>
+    <th>Type</th>
+    <th>Description</th>
   </tr>
   <tr>
     <td><code>valueChange</code></td>
     <td><code>string | null</code></td>
-    <td>Emitido quando o valor do input é alterado.</td>
+    <td>Emitted when the input value changes.</td>
   </tr>
   <tr>
     <td><code>onBlurEmit</code></td>
     <td><code>string | null</code></td>
-    <td>Emitido quando o input perde o foco.</td>
+    <td>Emitted when the input loses focus.</td>
   </tr>
 </table>

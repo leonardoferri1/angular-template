@@ -23,6 +23,17 @@
             <p>text-input</p>
           </a>
         </div>
+
+        <div>
+          <a
+            class="nav-button"
+            *ngIf="opened"
+            (click)="onPanelSwitchEvent(2)"
+            [ngClass]="{ active: selectedPanel === 2 }"
+          >
+            <p>text-area</p>
+          </a>
+        </div>
       </div>
     </div>
   </div>
