@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
+import { MenuComponent } from './shared/components/menu/menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoadingSpinnerComponent],
+  imports: [RouterOutlet, LoadingSpinnerComponent, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

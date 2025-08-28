@@ -3,7 +3,7 @@ import { ExemploComponent } from './pages/exemplo/exemplo.component';
 
 export const routes: Routes = [
   {
-    path: 'exemplo',
+    path: '',
     loadComponent: () => ExemploComponent,
   },
 ];

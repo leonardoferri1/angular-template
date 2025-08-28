@@ -1,16 +1,28 @@
 import { Component, signal } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { TextInputComponent } from '../../shared/components/web-components/text-input/text-input.component';
-import { TextAreaComponent } from '../../shared/components/web-components/text-area/text-area.component';
+import { TextInputComponent } from '@leonardoferri/angular-design-system';
+import { TextAreaComponent } from '@leonardoferri/angular-design-system';
+import { MenuComponent } from '../../shared/components/menu/menu.component';
+import { GettingStartedComponent } from './components/getting-started/getting-started.component';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-exemplo',
   standalone: true,
-  imports: [TextInputComponent, TextAreaComponent],
+  imports: [
+    TextInputComponent,
+    TextAreaComponent,
+    MenuComponent,
+    GettingStartedComponent,
+    NgIf,
+  ],
   templateUrl: './exemplo.component.html',
   styleUrl: './exemplo.component.scss',
 })
-export class ExemploComponent {}
+export class ExemploComponent {
+  selectedPanel: number = 0;
+  menuOpened = true;
+
+  onPanelSwitch(panel: any) {
+    this.selectedPanel = panel;
+  }
+}

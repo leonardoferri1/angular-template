@@ -1,2 +1,12 @@
-<text-input></text-input>
-<text-area></text-area>
+<app-menu
+  [(opened)]="menuOpened"
+  (onPanelSwitch)="onPanelSwitch($event)"
+></app-menu>
+
+<div class="main-container" [class.with-menu]="menuOpened">
+  <div *ngIf="selectedPanel == 0">
+    <app-getting-started></app-getting-started>
+  </div>
+  <!-- <text-input></text-input>
+  <text-area></text-area> -->
+</div>

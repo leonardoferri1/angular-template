@@ -1,0 +1,29 @@
+<div class="menu" [ngClass]="{ open: opened }">
+  <div class="menu-container">
+    <div class="menu-outter-content">
+      <div class="menu-inner-content">
+        <div class="overview-container">
+          <a
+            class="nav-button"
+            *ngIf="opened"
+            (click)="onPanelSwitchEvent(0)"
+            [ngClass]="{ active: selectedPanel === 0 }"
+          >
+            <p>Getting started</p>
+          </a>
+        </div>
+
+        <div>
+          <a
+            class="nav-button"
+            *ngIf="opened"
+            (click)="onPanelSwitchEvent(1)"
+            [ngClass]="{ active: selectedPanel === 1 }"
+          >
+            <p>text-input</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
