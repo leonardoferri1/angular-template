@@ -7,6 +7,8 @@
   <div *ngIf="selectedPanel == 0">
     <app-getting-started></app-getting-started>
   </div>
-  <!-- <text-input></text-input>
-  <text-area></text-area> -->
+
+  <div *ngIf="selectedPanel == 1">
+    <app-text-input-guide></app-text-input-guide>
+  </div>
 </div>

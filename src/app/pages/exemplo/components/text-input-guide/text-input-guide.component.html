@@ -1,0 +1,106 @@
+<h2>Input de Texto</h2>
+<p>
+  O componente <code>&lt;text-input&gt;</code> é um input customizado que
+  implementa <code>ControlValueAccessor</code>, funcionando com
+  <code>ngModel</code> e <code>Reactive Forms</code>.
+</p>
+
+<h3>Exemplo</h3>
+<div class="demo-box">
+  <text-input
+    placeholder="Digite seu nome"
+    [(ngModel)]="name"
+    [maxLength]="20"
+    [invalidValidator]="isInvalid"
+    (valueChange)="onValueChange($event)"
+    (onBlurEmit)="onBlur()"
+  ></text-input>
+</div>
+
+<h3>Código</h3>
+<ds-code-block>
+  &lt;text-input placeholder="Digite seu nome" [(ngModel)]="name"
+  [maxLength]="20" [invalidValidator]="isInvalid"
+  (valueChange)="onValueChange($event)" (onBlurEmit)="onBlur()"&gt;
+  &lt;/text-input&gt;
+</ds-code-block>
+
+<h3>Propriedades</h3>
+<table class="api-table">
+  <tr>
+    <th>Propriedade</th>
+    <th>Tipo</th>
+    <th>Padrão</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td><code>placeholder</code></td>
+    <td><code>string</code></td>
+    <td><code>''</code></td>
+    <td>Texto de placeholder exibido no input.</td>
+  </tr>
+  <tr>
+    <td><code>maxLength</code></td>
+    <td><code>number</code></td>
+    <td>-</td>
+    <td>Limite máximo de caracteres permitidos.</td>
+  </tr>
+  <tr>
+    <td><code>isReadonly</code></td>
+    <td><code>boolean</code></td>
+    <td><code>false</code></td>
+    <td>Define se o campo é somente leitura.</td>
+  </tr>
+  <tr>
+    <td><code>mask</code></td>
+    <td><code>string</code></td>
+    <td><code>''</code></td>
+    <td>Máscara do campo (usando <code>ngx-mask</code>).</td>
+  </tr>
+  <tr>
+    <td><code>disabled</code></td>
+    <td><code>boolean</code></td>
+    <td><code>false</code></td>
+    <td>Desabilita o campo.</td>
+  </tr>
+  <tr>
+    <td><code>type</code></td>
+    <td><code>'text' | 'password' | 'number'</code></td>
+    <td><code>'text'</code></td>
+    <td>
+      Tipo de input. Se <code>password</code>, exibe botão para mostrar/ocultar
+      senha.
+    </td>
+  </tr>
+  <tr>
+    <td><code>invalidValidator</code></td>
+    <td><code>boolean</code></td>
+    <td><code>false</code></td>
+    <td>Define se o input deve ter estilo de inválido.</td>
+  </tr>
+  <tr>
+    <td><code>allowSpecial</code></td>
+    <td><code>boolean</code></td>
+    <td><code>false</code></td>
+    <td>Impede caracteres especiais caso seja <code>false</code>.</td>
+  </tr>
+</table>
+
+<h3>Eventos</h3>
+<table class="api-table">
+  <tr>
+    <th>Evento</th>
+    <th>Tipo</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td><code>valueChange</code></td>
+    <td><code>string | null</code></td>
+    <td>Emitido quando o valor do input é alterado.</td>
+  </tr>
+  <tr>
+    <td><code>onBlurEmit</code></td>
+    <td><code>string | null</code></td>
+    <td>Emitido quando o input perde o foco.</td>
+  </tr>
+</table>
