@@ -41,9 +41,9 @@ import {
         display: block;
       }
       .ds-code {
-        background: #171717;
+        background: #0b0b0b;
         border: 1px solid #1f1f1f;
-        border-radius: 8px;
+        border-radius: 12px;
         overflow: hidden;
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
           'Liberation Mono', 'Courier New', monospace;
@@ -54,7 +54,7 @@ import {
         justify-content: space-between;
         padding: 8px 10px;
         border-bottom: 1px solid #1f1f1f;
-        background: #171717;
+        background: #0b0b0b;
       }
       .ds-code__lang {
         font-size: 12px;
@@ -91,9 +91,11 @@ import {
       }
       .ds-code__pre {
         display: flex;
-        align-items: center;
         margin: 0;
         padding: 2rem 1rem 2rem 1rem;
+        overflow: auto;
+        white-space: pre;
+        word-break: normal;
         color: #e5e7eb;
         font-size: 14px;
       }
@@ -102,6 +104,7 @@ import {
       }
     `,
   ],
+
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DsCodeBlockComponent {

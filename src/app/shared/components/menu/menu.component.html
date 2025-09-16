@@ -67,6 +67,50 @@
             <p>multiselect</p>
           </a>
         </div>
+
+        <div>
+          <a
+            class="nav-button"
+            *ngIf="opened"
+            (click)="onPanelSwitchEvent(6)"
+            [ngClass]="{ active: selectedPanel === 6 }"
+          >
+            <p>sidenav</p>
+          </a>
+        </div>
+
+        <div>
+          <a
+            class="nav-button"
+            *ngIf="opened"
+            (click)="onPanelSwitchEvent(7)"
+            [ngClass]="{ active: selectedPanel === 7 }"
+          >
+            <p>date-picker</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="menu-footer" *ngIf="opened">
+        <a
+          class="nav-button repo-button"
+          href="https://github.com/leonardoferri1/angular-template"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>Template Repo</p>
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+          class="nav-button repo-button"
+          href="https://github.com/leonardoferri1/angular-design-system"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>Library Repo</p>
+          <i class="fa-brands fa-github"></i>
+        </a>
       </div>
     </div>
   </div>

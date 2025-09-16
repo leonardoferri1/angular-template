@@ -1,0 +1,8 @@
+@import "variables";
+
+:host {
+  display: block;
+  padding: 24px;
+  font-family: "Inter", sans-serif;
+  color: $grey-light;
+}

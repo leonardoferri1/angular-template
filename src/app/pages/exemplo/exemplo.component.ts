@@ -7,6 +7,8 @@ import { TextAreaGuideComponent } from './components/text-area-guide/text-area-g
 import { CurrencyInputGuideComponent } from './components/currency-input-guide/currency-input-guide.component';
 import { DropdownGuideComponent } from './components/dropdown-guide/dropdown-guide.component';
 import { MultiselectGuideComponent } from './components/multiselect-guide/multiselect-guide.component';
+import { SidenavGuideComponent } from './components/sidenav-guide/sidenav-guide.component';
+import { DatePickerGuideComponent } from './components/date-picker-guide/date-picker-guide.component';
 
 @Component({
   selector: 'app-exemplo',
@@ -20,6 +22,8 @@ import { MultiselectGuideComponent } from './components/multiselect-guide/multis
     CurrencyInputGuideComponent,
     DropdownGuideComponent,
     MultiselectGuideComponent,
+    SidenavGuideComponent,
+    DatePickerGuideComponent,
   ],
   templateUrl: './exemplo.component.html',
   styleUrl: './exemplo.component.scss',

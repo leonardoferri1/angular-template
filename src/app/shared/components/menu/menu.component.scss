@@ -35,6 +35,7 @@
 
 .menu-container {
   width: 100%;
+  height: 100%;
 }
 
 .menu-outter-content {
@@ -43,6 +44,9 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 1rem;
   gap: 2rem;
 
   .menu-inner-content {
@@ -173,5 +177,35 @@
     cursor: not-allowed;
     box-shadow: none;
     pointer-events: none;
+  }
+}
+
+.menu-footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 80%;
+
+  .repo-button {
+    background: #222;
+    color: $grey-light;
+    text-align: center;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    display: flex;
+    padding: 0.5rem 0 0.5rem 0;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+
+    p {
+      margin: 0;
+    }
+
+    &:hover {
+      background: #444;
+    }
   }
 }
